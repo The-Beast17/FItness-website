@@ -1,0 +1,117 @@
+nav i{
+    display: none;
+}
+/***************************media**************/
+@media (max-width : 600px){
+    nav{
+        justify-content: space-between;
+        padding-right: 2vw;
+    }
+    nav i{
+        display: initial;
+        font-size: 3vh;
+        mix-blend-mode: difference;
+
+    }
+    nav .nav-middle{
+        display: none;
+    }
+    nav .register{
+        display: none;
+    }
+
+    /*******page1 ********/
+    .page1 {
+        height : 100vh;
+    }
+    .page1 .content{
+        flex-direction: column;
+        z-index: 2;
+    }
+
+    .page1 .content .left{
+          width : 100%;
+          height : 40vh;
+          margin-top : 18vh;
+          padding : none;
+          gap : 3vh
+    }
+    
+    .page1 .left h1:first-child{
+        font-size: 8vw;
+    }
+    .page1 .left h1:nth-child(2){
+        font-size: 9vw;
+    }
+
+    .page1 .content .left .l-btn-box{
+        height : 6vh ;
+        width :  20vh;
+    }
+    .page1 .content .left p{
+         font-size: 2vh;
+         line-height: 3vh;
+    }
+
+    .page1 .content .right{
+        width : 100%;
+        height : 60vh;
+        position: initial;
+        justify-content: center;
+    }
+
+    /*****************************page2*********************/
+    .page2{
+        height : max-content;
+        flex-direction: column-reverse;
+        padding: 0  5vw;
+    }
+
+
+    .page2 .left ,.page2 .right{
+         width : 100%;
+    } 
+
+    .page2 .left{
+        height: 50vh;
+    }
+    .page2 .right p{
+        font-size: 3.5vh;
+    }
+
+     /******************page 3************/
+    .page3 .content .card {
+        margin : 2vh 10px;
+    }
+    .page3 .content  .card:hover{
+        scale: 1;
+    }
+
+    /*********page4************/
+
+    .page4 {
+        height : max-content;
+    }
+
+    .page4>p{
+        padding :4vh 5%;
+    }
+    .page4 .content .box{
+        width : 300px;
+    }
+
+    /************footer***************/
+    footer{
+        height : 200px;
+    }
+    footer div{
+        display: block;
+        text-align: center;
+    }
+    footer div p{
+        line-height: 5vh;
+    }
+    footer>p{
+        font-size: 12px;
+    }
+}

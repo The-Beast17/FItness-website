@@ -1,0 +1,460 @@
+
+/*****************************/
+
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+html , body{
+    width : 100%;
+    height : 100%; 
+   
+}
+
+body{
+    font-family:"Montserrat";
+}
+nav{
+    width :100%;
+    display: flex;
+    justify-content: space-between;
+    padding : 0 1vw;
+    align-items:center;
+    position: fixed;
+    top : 0;
+    left :0;
+    z-index:100;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+nav img{ 
+    width : 20vh;
+}
+
+nav .nav-middle{
+    display: flex;
+    gap : 5vw;
+}
+
+nav  a{
+    text-decoration: none;
+    font-size: 1.1vw;
+    font-weight: 500;
+    z-index: 2;
+    position:relative;
+    padding : 1vw 0;
+    color :rgb(255, 251, 251);
+    mix-blend-mode: difference;
+}
+
+/******************************/
+
+nav .nav-middle a::before{
+    content: "";
+    height : 5%;
+    width : 0;
+    background-color: white;
+    position: absolute;
+    bottom : 0;
+    left : 0;
+    z-index:10;
+    transition : .25s all ease-in; 
+}
+
+nav .nav-middle a:hover::before{ 
+    width : 100%;
+}
+
+nav .register{
+    margin-right : 10vw;
+    height : 3vw ;
+    width : 8vw;
+}
+nav button{
+    height: 100%;
+    width : 100%;
+    font-weight: 600;
+    background-color: rgb(255, 255, 255);
+    border : none;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 75% 100%, 0% 100%);
+}
+nav button:hover{
+    background-color: rgb(187, 205, 220);
+}
+
+/********************************/
+.page1 {
+   height : 100%;
+   width : 100%;
+   background-color: black;
+   position : relative;
+   overflow: hidden;
+}
+
+.page1 .cut{
+    position : absolute;
+    height : 100%;
+    width : 100%;
+    background-color: chartreuse;
+    clip-path: polygon(87% 0%, 100% 0% , 100% 100% , 50% 100%);
+    background-attachment: fixed;
+    z-index: 1;
+}
+
+.page1 .content{
+    height : 100%;
+    width : 100%;
+    display: flex;
+    position : relative;
+}
+.page1 .left{
+    width : 60%;
+    height : 100%;
+    /* background-color: blueviolet; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    gap :2vw;
+    padding: 0  5vw;
+    color : white;
+}
+
+.page1 .left h1:first-child {
+    font-size: 4vw;
+    font-weight : 900;
+    color: transparent;
+    -webkit-text-stroke: 1px rgb(205, 202, 202);
+    font-family: Arial, Helvetica, sans-serif;
+    /*background-color: aqua;
+    -webkit-background-clip : text;  */
+}
+.page1 .left h1:nth-child(2){
+    font-size: 6vw;
+    font-weight : 900;
+    text-transform: uppercase;
+    letter-spacing: 1vh;
+}
+.page1 .content .left .l-btn-box{
+    height : 3.2vw ;
+    width : 13vw;
+}
+.page1 .content .left .l-btn-box button{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width : 100%;
+    font-size: 2vh;
+    font-weight: 600;
+    background-color: chartreuse;
+    border : none;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 80% 100%, 0% 100%);
+}
+.page1 .content .left .l-btn-box button:hover{
+    background-color:rgb(103, 202, 3) ;
+}
+.page1 .content .right{
+    height : 100%;
+    width : 40%;
+    z-index: 2;
+    display: flex;
+    align-items: end;
+    position: absolute;
+    right : 12%;
+}
+.page1 .content .right img{
+    height : 70%;
+}
+
+/* *******************page 2 *************** */
+.page2{
+    height : 100%;
+    width : 100%;
+    background-color: black;
+    display: flex;
+}
+
+.page2 .left{
+    height : 100%;
+    width : 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.page2 .left .cross{
+    position : absolute;
+    height : 100%;
+    width : 100%;
+    background-color: grey;
+    clip-path: polygon(50% 0%, 100% 0% , 50% 100% , 0% 100%);
+    background-attachment: fixed;
+    z-index: 1
+}
+
+.page2 .left img{
+    position: absolute;
+    height  : 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 100;
+}
+
+.page2 .right {
+    width : 50%;
+    height : 100%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    padding : 10px;
+    /* color : white;*/
+} 
+
+.page2 .right h1{
+    color:rgb(18, 247, 45) ;
+    font-size: 7vh;
+    -webkit-text-stroke: 1px rgb(18, 247, 45);
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 3px;
+    line-height: 15vh;
+}
+
+.page2 .right p{
+    font-size: 5vh;
+    font-weight: 700;
+    color : white;
+    line-height: 7vh;
+    /* text-align: center; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.page2 .right button {
+    font-size: 16px;
+    padding : 10px 10px;
+    width : 150px;
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    color: grey;
+    border : none;
+    margin : 20px 0;
+    border-bottom: 2px solid black;
+    transition: 0.25s linear ;
+}
+
+
+.page2 .right button:hover{
+    color : chartreuse;
+  border-bottom: 2px solid chartreuse;
+}
+
+
+
+
+/******** ******page3*******************/
+
+.page3{
+    height : 100%;
+    width : 100%;
+    background-color: black;
+}
+
+.page3 .empty{
+    height : 10%;
+    width : 100%;
+}
+.page3 .heading{
+    font-size: 5vh;
+    color : white;
+    text-align: center;
+}
+
+.page3 .heading span{ color : chartreuse}
+
+.page3 .content {
+    width : 100%;
+    height : 80%;
+     display: flex;
+     align-items: center;
+     justify-content: space-evenly;
+    overflow-x: scroll;
+   white-space: nowrap;
+}
+
+
+
+.page3 .content .card{
+    width : 45vh;
+    height : 80%;
+    padding : 3vh;
+    border : 2px solid white;
+    border-radius: 2vh;
+    background-color: rgb(37, 37, 37);
+    display: inline-block;
+    margin : 0 2vh;
+    transition : 0.25s linear;
+    /* white-space: wrap; */
+    color : white;
+}
+
+.page3 .content  .card:hover{
+    border-color: chartreuse;
+    scale: 1.1;
+    box-shadow: 0 0 10px rgb(174, 172, 172);
+}
+
+
+
+.page3 .content .card h1:first-child{
+   font-weight : 600;
+   color : chartreuse;
+   padding : 1vh 0;
+}
+.page3 .content .card p{
+   font-size : 2vh;
+   line-height : 3vh;
+}
+.page3 .content .card .price{
+    display: flex;
+    padding : 1vh;
+   
+}
+.page3 .content .card .price sup{
+   font-size: 3vh;
+   font-weight: 600;
+   color: chartreuse;
+}
+.page3 .content .card .price h1{
+   font-size: 7vh;
+   font-weight: 600;
+}
+.page3 .content .card .price p{
+    padding-top : 4vh;
+    color : grey;
+}
+.page3 .content .card button{
+  font-size: 2vh;
+  width : 90%;
+  padding : 1.5vh 0;
+  border-radius : 25px;
+  background-color: rgb(61, 61, 61);
+  color : white;
+  border : none;
+  transition : 0.25s linear;
+}
+
+.page3 .content .card button:hover{
+    background-color: azure;
+    color: black;
+}
+.page3 .content .card .check{
+  padding : 5vh 0;
+  width : 100%;
+}
+.page3 .content .card .check p{
+  padding : 2vh 0;
+  width : 100%;
+  border-bottom : 1px solid white;
+}
+.page3 .content::-webkit-scrollbar{
+    display: none;
+}
+
+/*******************page4 **************/
+.page4{
+    height : 100%;
+    width : 100%;
+    background-color: black;
+    color : white;
+    text-align: center;
+    padding : 5vw;
+}
+
+.page4 > h1{
+    font-size: 7vh;
+}
+
+.page4 > p{
+    padding : 5vh 15vh;
+}
+
+.page4 .content{
+    margin : 4vh auto;
+    /* width : 80%; */
+    border : 2px solid white;
+    padding : 5vh 3vh;
+    white-space: nowrap;
+    overflow: scroll;
+    border-radius: 10px;
+}
+.page4 .content::-webkit-scrollbar{
+    display: none;
+}
+
+.page4 .content .box{
+    height : 300px;
+    margin : 1vh 3vh;
+    display: inline-block;
+    white-space: wrap;
+    padding : 6vh 3vh;
+    width : 350px;
+    border : 2px solid white;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.page4 .content .box h1{
+    font-size: 4vh;
+}
+.page4 .content .box p{
+    font-size: 2vh;
+    padding : 3vh 0;
+}
+.page4 .content .box button{
+    font-size: 16px;
+    padding : 10px 10px;
+    width : 150px;
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    color: chartreuse;
+    border : none;
+    border-bottom: 2px solid black;
+    transition: 0.25s linear ;
+}
+.page4 .content .box button:hover{
+    border-bottom: 2px solid chartreuse;
+}
+
+/************footer*************/
+footer{
+    height : 120px;
+    width : 100%;
+    background-color: rgb(52, 52, 52);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color : grey;
+    padding : 5vw;
+}
+footer>p{
+    padding : 2vh;
+}
+
+footer div{
+    display: flex;
+    gap : 15px;
+}
+footer div a{
+    color : rgb(172, 169, 169);
+    transition: 0.25 linear;
+}
+footer div a:hover{
+    color : chartreuse
+}
+
